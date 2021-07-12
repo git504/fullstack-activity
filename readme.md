@@ -11,16 +11,20 @@ Vous allez créer une API basique pour une boutique en ligne qui permet de crée
 - [x] `price` : le prix du produit, de type Number
 - [x] `inStock` : si le produit est en stock, de type Boolean.
 
-# Vous allez implémenter cinq routes :
+# Vous allez implémenter cinq routes
 
-- [x] GET: `/api/products`
+- 1. GET: `/api/products`
 Retournera tous les produits sous la forme`{ products: Product[] }`
-- [x] GET:`/api/products/:id`
+***
+
+- 2. GET:`/api/products/:id`
 Retournera le produit avec le`_id` fourni sous la forme `{ product: Product }`
-- [x] POST:`/api/products`
+***
+
+- 3. POST:`/api/products`
 Créera un nouveau Product dans la base de données.
 
-# Le corps de la requête a pour forme :
+Le corps de la requête a pour forme :
 
 ```{
     "name": string,
@@ -31,9 +35,7 @@ Créera un nouveau Product dans la base de données.
 ```
 
 Il retournera le Product ainsi créé (y compris son champ `_id` ), sous la forme`{ product: Product }`.
-
-***
-# La Promise retournée par la méthode save() de votre modèle Mongoose reçoit le produit créé :
+La Promise retournée par la méthode save() de votre modèle Mongoose reçoit le produit créé :
 
 ```
 product.save()
@@ -42,11 +44,9 @@ product.save()
 ```
 ***
 
-- [x] PUT: `/api/products/:id`
+- 4. PUT: `/api/products/:id`
 Modifiera le produit avec le `_id` fourni selon les données envoyées dans le corps de la requête.
-
-# Le corps de la requête a pour forme :
-
+Le corps de la requête a pour forme :
 ```
 {
     "name": string,
@@ -55,18 +55,25 @@ Modifiera le produit avec le `_id` fourni selon les données envoyées dans le c
     "inStock": boolean
 }
 ```
-
 Retournera un objet de la forme`{ message: 'Modified!' }`
-
-- [x] DELETE : `/api/products/:id`
+***
+- 5. DELETE : `/api/products/:id`
 Supprimera le produit avec le `_id` fourni.
 Retournera un objet de la forme `{ message: 'Deleted!' }`
+***
+
+# Installation 
 
 Votre API devra tourner sur votre machine locale en `localhost` (de préférence en port 3000, mais l'application front-end vous permet de modifier ce port si besoin) et accepter les requêtes HTTP venant de n'importe quelle origine (n'oubliez pas la configuration CORS !).
 
-Pour tester votre API, vous allez installer une mini-application front-end. Clonez le repo avec le code frontend sur ce lien. [REPOGITHUB](./Savez-vous-implémenter-le-CRUD-OpenClassrooms.png)
+Pour tester votre API, vous allez installer une mini-application front-end.    
+Clonez le repo avec le code frontend sur ce lien.    
+* [REPOGITHUB](./Savez-vous-implémenter-le-CRUD-OpenClassrooms.png)
 
-**Depuis** le dossier cloné,    
+***
+
+# **Depuis** le dossier cloné
+
 * `npm install`
 * `npm install --save-dev run-script-os` 
 * `npm start` . Vous devriez voir s'ouvrir une fenêtre de navigateur comme celle-ci :
@@ -78,10 +85,11 @@ Pour tester votre API, vous allez installer une mini-application front-end. Clon
 
 Si votre serveur tourne, cliquez sur `TEST ROUTES` pour lancer les tests. Ces tests vous permettront de vérifier que vous avez bien réussi à implémenter les routes demandées et donc de valider ce quiz ! Vous verrez apparaître des messages de succès (ou d'erreur) selon que l'application a réussi à faire fonctionner votre API ou non.
 
-***
+
 Si votre navigateur s'ouvre avec une **erreur 404**, attendez quelques secondes et faites un refresh.
 
 Parfois, lors de la première tentative après le lancement de l'application, celle-ci émet une erreur même si l'API fonctionne. Re-cliquez sur `TEST ROUTES`. S'il y a toujours une erreur, il est probable qu'elle vienne de votre API.
 ***
+# Question 
 
 ![QUESTION](./Savez-vous-implémenter-le-CRUD-OpenClassrooms.png)
