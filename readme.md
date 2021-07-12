@@ -6,21 +6,21 @@ Pour pouvoir répondre correctement, il vous faudra créer une API fonctionnelle
 
 Vous allez créer une API basique pour une boutique en ligne qui permet de créer, lire, modifier et supprimer des produits ( `Product` ). Les `Product` auront quatre champs obligatoires :
 
-- [] `name` : le nom du produit, de type String
-- [] `description` : la description du produit, de type String
-- [] `price` : le prix du produit, de type Number
-- [] `inStock` : si le produit est en stock, de type Boolean.
+- [x] `description` : la description du produit, de type String
+- [x] `name` : le nom du produit, de type String
+- [x] `price` : le prix du produit, de type Number
+- [x] `inStock` : si le produit est en stock, de type Boolean.
 
-Vous allez implémenter cinq routes :
+# Vous allez implémenter cinq routes :
 
-- [] GET: `/api/products`
+- [x] GET: `/api/products`
 Retournera tous les produits sous la forme`{ products: Product[] }`
-- [] GET:`/api/products/:id`
+- [x] GET:`/api/products/:id`
 Retournera le produit avec le`_id` fourni sous la forme `{ product: Product }`
-- [] POST:`/api/products`
+- [x] POST:`/api/products`
 Créera un nouveau Product dans la base de données.
 
-Le corps de la requête a pour forme :
+# Le corps de la requête a pour forme :
 
 `{
     "name": string,
@@ -32,17 +32,17 @@ Le corps de la requête a pour forme :
 Il retournera le Product ainsi créé (y compris son champ `_id` ), sous la forme`{ product: Product }`.
 
 ***
-La Promise retournée par la méthode save() de votre modèle Mongoose reçoit le produit créé :
+# La Promise retournée par la méthode save() de votre modèle Mongoose reçoit le produit créé :
 
 `product.save()
 .then(product => ... ... .json({ product }))
 .catch(error => ... ...)`
 ***
 
-- [] PUT: `/api/products/:id`
+- [x] PUT: `/api/products/:id`
 Modifiera le produit avec le `_id` fourni selon les données envoyées dans le corps de la requête.
 
-Le corps de la requête a pour forme :
+# Le corps de la requête a pour forme :
 
 `{
     "name": string,
@@ -53,20 +53,20 @@ Le corps de la requête a pour forme :
 
 Retournera un objet de la forme`{ message: 'Modified!' }`
 
-- [] DELETE : `/api/products/:id`
+- [x] DELETE : `/api/products/:id`
 Supprimera le produit avec le `_id` fourni.
 Retournera un objet de la forme `{ message: 'Deleted!' }`
 
 Votre API devra tourner sur votre machine locale en `localhost` (de préférence en port 3000, mais l'application front-end vous permet de modifier ce port si besoin) et accepter les requêtes HTTP venant de n'importe quelle origine (n'oubliez pas la configuration CORS !).
 
-Pour tester votre API, vous allez installer une mini-application front-end. Clonez le repo avec le code frontend sur ce lien. [REPOGITHUB](https://github.com/OpenClassrooms-Student-Center/fullstack-activity)
+Pour tester votre API, vous allez installer une mini-application front-end. Clonez le repo avec le code frontend sur ce lien. [REPOGITHUB](./Savez-vous-implémenter-le-CRUD-OpenClassrooms.png)
 
 Depuis le dossier cloné, exécutez `npm install` puis `npm start` . Vous devriez voir s'ouvrir une fenêtre de navigateur comme celle-ci :
 
 ***Front end app***
 ***Application front-end***
 
-![FENETRE](Savez-vous-implémenter-le-CRUD-OpenClassrooms.png)
+![FENETRE](./imgport.png)
 
 Si votre serveur tourne, cliquez sur `TEST ROUTES` pour lancer les tests. Ces tests vous permettront de vérifier que vous avez bien réussi à implémenter les routes demandées et donc de valider ce quiz ! Vous verrez apparaître des messages de succès (ou d'erreur) selon que l'application a réussi à faire fonctionner votre API ou non.
 
