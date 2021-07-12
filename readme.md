@@ -22,21 +22,24 @@ Créera un nouveau Product dans la base de données.
 
 # Le corps de la requête a pour forme :
 
-`{
+```{
     "name": string,
     "description": string,
     "price": number,
     "inStock": boolean
-}`
+}
+```
 
 Il retournera le Product ainsi créé (y compris son champ `_id` ), sous la forme`{ product: Product }`.
 
 ***
 # La Promise retournée par la méthode save() de votre modèle Mongoose reçoit le produit créé :
 
-`product.save()
+```
+product.save()
 .then(product => ... ... .json({ product }))
-.catch(error => ... ...)`
+.catch(error => ... ...)
+```
 ***
 
 - [x] PUT: `/api/products/:id`
@@ -44,12 +47,14 @@ Modifiera le produit avec le `_id` fourni selon les données envoyées dans le c
 
 # Le corps de la requête a pour forme :
 
-`{
+```
+{
     "name": string,
     "description": string,
     "price": number,
     "inStock": boolean
-}`
+}
+```
 
 Retournera un objet de la forme`{ message: 'Modified!' }`
 
@@ -61,7 +66,10 @@ Votre API devra tourner sur votre machine locale en `localhost` (de préférence
 
 Pour tester votre API, vous allez installer une mini-application front-end. Clonez le repo avec le code frontend sur ce lien. [REPOGITHUB](./Savez-vous-implémenter-le-CRUD-OpenClassrooms.png)
 
-Depuis le dossier cloné, exécutez `npm install` puis `npm start` . Vous devriez voir s'ouvrir une fenêtre de navigateur comme celle-ci :
+**Depuis** le dossier cloné,    
+* `npm install`
+* `npm install --save-dev run-script-os` 
+* `npm start` . Vous devriez voir s'ouvrir une fenêtre de navigateur comme celle-ci :
 
 ***Front end app***
 ***Application front-end***
