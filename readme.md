@@ -93,3 +93,12 @@ Parfois, lors de la première tentative après le lancement de l'application, ce
 # Question 
 
 ![QUESTION](./Savez-vous-implémenter-le-CRUD-OpenClassrooms.png)
+
+Pour verifier la réponse....
+
+```
+cd backend
+npm init -y
+npm install --save express
+```
+and then code...
